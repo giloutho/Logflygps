@@ -1,0 +1,77 @@
+{
+  "name": "logflygps",
+  "productName": "LogflyGPS",
+  "version": "1.0.0",
+  "description": "Plugin de Logfly pour l'importation GPS via Electron",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build && electron-builder",
+    "preview": "vite preview",
+    "gettext:extract": "vue-gettext-extract",
+    "gettext:compile": "vue-gettext-compile"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@photostructure/tz-lookup": "^11.4.0",
+    "drivelist": "^11.1.0",
+    "electron-store": "^8.1.0",
+    "iana-tz-data": "^2019.1.0",
+    "pinia": "^2.1.7",
+    "serialport": "^12.0.0",
+    "vue": "^3.4.21",
+    "vue3-gettext": "^3.0.0-beta.4",
+    "vuetify": "^3.4.0",
+    "zoned-date-time": "^1.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "electron": "^37.3.0",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6",
+    "vite-plugin-electron": "^0.28.6",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "vue-tsc": "^2.0.26"
+  },
+  "build": {
+    "appId": "org.logfly.logflygps",
+    "productName": "LogflyGPS",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "bin_ext",
+        "to": "bin_ext",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "public/logfly-icon.icns"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "public/logfly-icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "public/logfly-icon.png"
+    }
+  }
+}

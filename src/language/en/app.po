@@ -1,0 +1,322 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/components/FlightTable.vue:129
+msgid "Actions"
+msgstr "Actions"
+
+#: src/components/FlightTable.vue:59
+msgid "Already in the logbook"
+msgstr "Already in the logbook"
+
+#: src/views/SerialImportView.vue:175
+msgid "attempt to read on"
+msgstr "attempt to read on"
+
+#: src/views/SupportView.vue:28
+msgid "Bug reports"
+msgstr "Bug reports"
+
+#: src/components/OpenLogbook.vue:58
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/components/OpenLogbook.vue:19
+msgid "Choose a folder"
+msgstr "Choose a folder"
+
+#: src/App.vue:72 src/components/FlightTable.vue:16
+#: src/components/OpenLogbook.vue:68
+msgid "Close"
+msgstr "Close"
+
+#: src/views/SupportView.vue:11
+msgid "Contact"
+msgstr "Contact"
+
+#: src/views/SupportView.vue:14
+msgid "Contact the Logfly support our online form"
+msgstr "Contact the Logfly support our online form"
+
+#: src/components/OpenLogbook.vue:49
+msgid "Create new logbook"
+msgstr "Create new logbook"
+
+#: src/components/FlightListDialog.vue:21 src/components/FlightTable.vue:124
+msgid "Date"
+msgstr "Date"
+
+#: src/App.vue:29 src/components/TheWelcome.vue:27
+#: src/views/DiskImportView.vue:7
+msgid "Disk"
+msgstr "Disk"
+
+#: src/components/FlightTable.vue:6
+msgid "Display all tracks"
+msgstr "Display all tracks"
+
+#: src/components/FlightListDialog.vue:23 src/components/FlightTable.vue:126
+msgid "Duration"
+msgstr "Duration"
+
+#: src/views/SupportView.vue:39
+msgid "English"
+msgstr "English"
+
+#: src/components/OpenLogbook.vue:43
+msgid "Enter a name and click the Create button"
+msgstr "Enter a name and click the Create button"
+
+#: src/components/OpenLogbook.vue:171 src/views/DiskImportView.vue:148
+msgid "Error"
+msgstr "Error"
+
+#: src/components/OpenLogbook.vue:264 src/components/OpenLogbook.vue:267
+msgid "Error creating the logbook"
+msgstr "Error creating the logbook"
+
+#: src/views/DiskImportView.vue:113
+msgid "Error during scanning"
+msgstr "Error during scanning"
+
+#: src/components/OpenLogbook.vue:200 src/components/OpenLogbook.vue:203
+msgid "Error reading the file"
+msgstr "Error reading the file"
+
+#: src/components/OpenLogbook.vue:8
+msgid "Existing logbook"
+msgstr "Existing logbook"
+
+#: src/components/FlightTable.vue:127
+msgid "File"
+msgstr "File"
+
+#: src/views/SerialImportView.vue:348
+msgid "Flight preview"
+msgstr "Flight preview"
+
+#: src/views/UsbImportView.vue:183
+msgid "Found"
+msgstr "Found"
+
+#: src/views/SupportView.vue:39
+msgid "French"
+msgstr "French"
+
+#: src/views/SupportView.vue:12
+msgid "Have a question or suggestion"
+msgstr "Have a question or suggestion"
+
+#: src/components/FlightTable.vue:13
+msgid "Import"
+msgstr "Import"
+
+#: src/views/SerialImportView.vue:265
+msgid "Importing"
+msgstr "Importing"
+
+#: src/components/OpenLogbook.vue:128
+msgid "In previous versions of Logfly"
+msgstr "In previous versions of Logfly"
+
+#: src/components/FlightTable.vue:62
+msgid "Invalid"
+msgstr "Invalid"
+
+#: src/views/SupportView.vue:38
+msgid "Languages"
+msgstr "Languages"
+
+#: src/App.vue:125 src/App.vue:34
+msgid "Logbook"
+msgstr "Logbook"
+
+#: src/components/OpenLogbook.vue:28
+msgid "Logbooks detected"
+msgstr "Logbooks detected"
+
+#: src/components/TheWelcome.vue:59
+msgid ""
+"LogflyGPS allows importing GPS tracks into a logbook managed by the "
+"Logfly.app web application."
+msgstr ""
+"LogflyGPS allows importing GPS tracks into a logbook managed by the "
+"Logfly.app web application."
+
+#: src/views/SerialImportView.vue:52
+msgid "Manufacturer"
+msgstr "Manufacturer"
+
+#: src/views/DiskImportView.vue:277 src/views/UsbImportView.vue:367
+msgid "Map"
+msgstr "Map"
+
+#: src/views/SerialImportView.vue:332
+msgid "Map request"
+msgstr "Map request"
+
+#: src/views/SerialImportView.vue:51
+msgid "Name"
+msgstr "Name"
+
+#: src/views/SupportView.vue:12
+msgid "Need help"
+msgstr "Need help"
+
+#: src/components/OpenLogbook.vue:40
+msgid "New logbook"
+msgstr "New logbook"
+
+#: src/views/SerialImportView.vue:221
+msgid "No flights found on the ports list"
+msgstr "No flights found on the ports list"
+
+#: src/components/OpenLogbook.vue:167
+msgid "No logbook found in this folder"
+msgstr "No logbook found in this folder"
+
+#: src/views/DiskImportView.vue:118 src/views/DiskImportView.vue:131
+#: src/views/DiskImportView.vue:145 src/views/UsbImportView.vue:192
+#: src/views/UsbImportView.vue:205 src/views/UsbImportView.vue:219
+msgid "No tracks in this folder"
+msgstr "No tracks in this folder"
+
+#: src/views/SerialImportView.vue:139 src/views/SerialImportView.vue:166
+msgid "No usable serial port detected"
+msgstr "No usable serial port detected"
+
+#: src/views/UsbImportView.vue:154 src/views/UsbImportView.vue:179
+msgid "No USB drives found"
+msgstr "No USB drives found"
+
+#: src/views/SupportView.vue:19
+msgid "Open Contact Form"
+msgstr "Open Contact Form"
+
+#: src/App.vue:125
+msgid "opened"
+msgstr "opened"
+
+#: src/components/FlightTable.vue:128
+msgid "Pilot"
+msgstr "Pilot"
+
+#: src/components/FlightListDialog.vue:5
+msgid "Quick Logbook View"
+msgstr "Quick Logbook View"
+
+#: src/views/UsbImportView.vue:183
+msgid "Reading flights in progress"
+msgstr "Reading flights in progress"
+
+#: src/components/OpenLogbook.vue:23
+msgid "Reopen"
+msgstr "Reopen"
+
+#: src/views/DiskImportView.vue:89
+msgid "Scanning"
+msgstr "Scanning"
+
+#: src/views/SerialImportView.vue:157 src/views/UsbImportView.vue:169
+msgid "Search"
+msgstr "Search"
+
+#: src/views/DiskImportView.vue:11
+msgid "Select a folder containing IGC or GPX track files to import."
+msgstr "Select a folder containing IGC or GPX track files to import."
+
+#: src/components/OpenLogbook.vue:29
+msgid "Select a logbook"
+msgstr "Select a logbook"
+
+#: src/views/DiskImportView.vue:16
+msgid "Select folder"
+msgstr "Select folder"
+
+#: src/views/UsbImportView.vue:18
+msgid "Select your GPS device to automatically detect and import flights."
+msgstr "Select your GPS device to automatically detect and import flights."
+
+#: src/views/SerialImportView.vue:18
+msgid ""
+"Select your GPS device type. LogflyGPS will scan all serial ports to find "
+"your GPS."
+msgstr ""
+"Select your GPS device type. LogflyGPS will scan all serial ports to find "
+"your GPS."
+
+#: src/App.vue:24 src/components/TheWelcome.vue:21
+#: src/views/SerialImportView.vue:14
+msgid "Serial GPS"
+msgstr "Serial GPS"
+
+#: src/views/SerialImportView.vue:36
+msgid "Serial ports"
+msgstr "Serial ports"
+
+#: src/views/SerialImportView.vue:45
+msgid "Serial Ports Detected"
+msgstr "Serial Ports Detected"
+
+#: src/components/FlightListDialog.vue:24
+msgid "Site"
+msgstr "Site"
+
+#: src/App.vue:39 src/views/SupportView.vue:11
+msgid "Support"
+msgstr "Support"
+
+#: src/components/OpenLogbook.vue:129
+msgid "the default logbook folder was Documents/Logfly"
+msgstr "the default logbook folder was Documents/Logfly"
+
+#: src/components/OpenLogbook.vue:130
+msgid "The default logbook was logfly.db"
+msgstr "The default logbook was logfly.db"
+
+#: src/components/FlightListDialog.vue:22 src/components/FlightTable.vue:125
+msgid "Time"
+msgstr "Time"
+
+#: src/components/FlightTable.vue:5 src/views/DiskImportView.vue:122
+#: src/views/UsbImportView.vue:196
+msgid "tracks decoded"
+msgstr "tracks decoded"
+
+#: src/App.vue:135 src/views/DiskImportView.vue:250
+#: src/views/SerialImportView.vue:303 src/views/UsbImportView.vue:340
+msgid "tracks imported"
+msgstr "tracks imported"
+
+#: src/views/SerialImportView.vue:142
+msgid "Unable to retrieve serial ports"
+msgstr "Unable to retrieve serial ports"
+
+#: src/views/SerialImportView.vue:58
+msgid "Unknown"
+msgstr "Unknown"
+
+#: src/views/UsbImportView.vue:44
+msgid "USB Drives Detected"
+msgstr "USB Drives Detected"
+
+#: src/App.vue:19 src/components/TheWelcome.vue:15
+#: src/views/UsbImportView.vue:14
+msgid "USB GPS"
+msgstr "USB GPS"
+
+#: src/views/UsbImportView.vue:35
+msgid "Usb list"
+msgstr "Usb list"
+
+#: src/components/TheWelcome.vue:7
+msgid "Welcome to LogflyGPS"
+msgstr "Welcome to LogflyGPS"
