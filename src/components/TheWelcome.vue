@@ -1,7 +1,7 @@
 <template>
     <div class="welcome-container">
         <div class="welcome-icon">
-            <v-icon size="48" color="white">mdi-airplane-takeoff</v-icon>
+            <v-img src="/logflygps_48.png" width="48" height="48" />
         </div>
 
         <h1 class="welcome-title">{{ $gettext('Welcome to LogflyGPS') }}</h1>
@@ -32,16 +32,7 @@
 
         <v-divider class="my-8" style="width: 300px;" />
 
-        <div class="info-section">
-            <v-chip color="info" variant="tonal" class="mr-2">
-                <v-icon start>mdi-information</v-icon>
-                Plugin Logfly.app
-            </v-chip>
-            <v-chip color="success" variant="tonal">
-                <v-icon start>mdi-check-circle</v-icon>
-                Full Access API
-            </v-chip>
-        </div>
+
     </div>
 </template>
 
@@ -56,7 +47,10 @@ defineEmits<{
 }>()
 
 const welcomeMessage = computed(() => {
-    return $gettext('LogflyGPS allows importing GPS tracks into a logbook managed by the Logfly.app web application.')
+    let msg = $gettext('LogflyGPS allows importing GPS tracks into a logbook')
+    msg += ' ' + $gettext('managed by Logfly')
+    //return $gettext('LogflyGPS allows importing GPS tracks into a logbook managed by the Logfly.app web application.')
+    return msg
 })
 </script>
 
