@@ -70,30 +70,81 @@ ipcMain.handle('db:create', async (_event, args) => {
             fs.mkdirSync(dir, { recursive: true })
         }
 
-        // For now, we'll create an empty file
-        // The actual SQLite initialization with tables will be done later
-        // when we integrate better-sqlite3 or the renderer uses sql.js
+        const db = new DatabaseSync(dbPath)
 
-        // Create empty SQLite database header
-        // Minimum valid SQLite3 database (header only, no tables)
-        const sqliteHeader = Buffer.from([
-            0x53, 0x51, 0x4c, 0x69, 0x74, 0x65, 0x20, 0x66, // "SQLite f"
-            0x6f, 0x72, 0x6d, 0x61, 0x74, 0x20, 0x33, 0x00, // "ormat 3\0"
-            0x10, 0x00, 0x01, 0x01, 0x00, 0x40, 0x20, 0x20,
-            0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
-            0x00, 0x2e, 0x5c, 0x8b, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-        ])
+        // Enable foreign keys
+        db.exec("PRAGMA foreign_keys = ON;")
 
-        // Actually, let's just notify the renderer to create the database with proper schema
-        // The renderer will use sql.js which is compatible with logfly-web
-        fs.writeFileSync(dbPath, sqliteHeader)
+        // Create tables (Schema matching Logfly 6)
+
+        // VOL (Flights)
+        db.exec(`CREATE TABLE IF NOT EXISTS Vol (
+            V_ID integer NOT NULL PRIMARY KEY,
+            V_Date TimeStamp,
+            V_Duree integer,
+            V_sDuree varchar(20),
+            V_LatDeco double,
+            V_LongDeco double,
+            V_AltDeco integer,
+            V_Site varchar(100),
+            V_Pays varchar(50),
+            V_Commentaire Long Text,
+            V_IGC Long Text,
+            V_Photos Long Text,
+            UTC integer,
+            V_CFD integer,
+            V_Engin Varchar(10),
+            V_League integer,
+            V_Score Long Text,
+            V_Tag INTEGER
+        );`)
+        // SITES (Sites)
+        db.exec(`CREATE TABLE IF NOT EXISTS Site (
+            S_ID integer NOT NULL primary key,
+            S_Nom varchar(50),
+            S_Localite varchar(50),
+            S_CP varchar(8),
+            S_Pays varchar(50),
+            S_Type varchar(1),
+            S_Orientation varchar(20),
+            S_Alti varchar(12),
+            S_Latitude double,
+            S_Longitude double,
+            S_Commentaire Long Text,
+            S_Maj varchar(10)
+        );`)
+
+        // MATERIEL (Gear)
+        db.exec(`CREATE TABLE IF NOT EXISTS Equip (
+            M_ID integer NOT NULL PRIMARY KEY,
+            M_Date TimeStamp,
+            M_Engin varchar(30),
+            M_Event varchar(30),
+            M_Price double,
+            M_Comment Long Text 
+        );`)
+
+        // Création de la table Tag
+        db.exec(`CREATE TABLE Tag (
+            Tag_ID INTEGER PRIMARY KEY,
+            Tag_Label TEXT,
+            Tag_Color TEXT
+        )`);
+
+        // Insertion des tags par défaut
+        const defaultTags = [
+            [1, 'Tag 1', '#F44336'], // Red
+            [2, 'Tag 2', '#FF9800'], // Orange
+            [3, 'Tag 3', '#FFEB3B'], // Yellow
+            [4, 'Tag 4', '#4CAF50'], // Green
+            [5, 'Tag 5', '#2196F3']  // Blue
+        ];
+        const stmtInsert = db.prepare(`INSERT INTO Tag (Tag_ID, Tag_Label, Tag_Color) VALUES (?, ?, ?)`);
+        for (const tag of defaultTags) {
+            stmtInsert.run(tag[0], tag[1], tag[2]);
+        }
+
+        db.close()
 
         currentDbPath = dbPath
         store.set('lastDbPath', dbPath)
@@ -104,8 +155,7 @@ ipcMain.handle('db:create', async (_event, args) => {
         return {
             success: true,
             dbPath,
-            name: path.basename(dbPath),
-            needsInit: true // Tell renderer to initialize the schema
+            name: path.basename(dbPath)
         }
     } catch (error: any) {
         console.error('[DB] Error creating database:', error)
