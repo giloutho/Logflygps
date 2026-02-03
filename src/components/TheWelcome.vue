@@ -1,7 +1,7 @@
 <template>
     <div class="welcome-container">
         <div class="welcome-icon">
-            <v-img src="/logflygps_48.png" width="48" height="48" />
+            <img :src="logoUrl" width="64" height="64" alt="Logfly" />
         </div>
 
         <h1 class="welcome-title">{{ $gettext('Welcome to LogflyGPS') }}</h1>
@@ -39,6 +39,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useGettext } from 'vue3-gettext'
+import logoUrl from '@/assets/logflygps_64.png'
 
 const { $gettext } = useGettext()
 

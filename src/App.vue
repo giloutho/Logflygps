@@ -3,8 +3,7 @@
     <!-- App Bar with navigation -->
     <v-app-bar class="logflygps-appbar" density="comfortable">
       <v-app-bar-title>
-        <v-icon start>mdi-airplane</v-icon>
-        LogflyGPS
+        <b>LogflyGPS</b>
         <v-chip v-if="currentDbName" color="white" variant="outlined" size="small" class="ml-3">
           <v-icon start size="small">mdi-database</v-icon>
           {{ currentDbName }}
@@ -64,6 +63,36 @@
       <SupportView v-if="currentView === 'support'" />
     </v-main>
 
+    <!-- Update Dialog -->
+    <v-dialog v-model="updateAvailable" persistent max-width="500">
+      <v-card>
+        <v-card-title class="text-h5 bg-primary text-white">
+          <v-icon start icon="mdi-cloud-download" />
+          {{ $gettext('Update Available') }}
+        </v-card-title>
+        <v-card-text class="pt-4">
+          <div class="d-flex align-center mb-4">
+            <v-img :src="logoUrl" width="64" height="64" class="mr-4 flex-grow-0" />
+            <div>
+              <div class="text-subtitle-1 font-weight-bold">{{ $gettext('New version available') }}</div>
+              <div class="text-body-2">{{ $gettext('Version') }} {{ updateVersion }} {{ $gettext('is available.')
+              }}</div>
+            </div>
+          </div>
+          <p>{{ $gettext('Click download to get the latest version from GitHub.') }}</p>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn color="grey-darken-1" variant="text" @click="updateAvailable = false">
+            {{ $gettext('Later') }}
+          </v-btn>
+          <v-btn color="primary" @click="openUpdateUrl" prepend-icon="mdi-download">
+            {{ $gettext('Download') }}
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
     <!-- Snackbar for notifications -->
     <v-snackbar v-model="snackbar" :color="snackbarColor" :timeout="4000" location="bottom">
       {{ snackbarText }}
@@ -90,6 +119,7 @@ import DiskImportView from './views/DiskImportView.vue'
 import SupportView from './views/SupportView.vue'
 import FlightListDialog from './components/FlightListDialog.vue'
 import TheFooter from './components/TheFooter.vue'
+import logoUrl from '@/assets/logflygps_30.png'
 
 const { $gettext } = useGettext()
 
@@ -106,6 +136,11 @@ const snackbarText = ref('')
 const snackbarColor = ref('success')
 
 // Provide snackbar function to child components
+// Update state
+const updateAvailable = ref(false)
+const updateVersion = ref('')
+const updateUrl = ref('')
+
 function showSnackbar(text: string, color: string = 'success') {
   snackbarText.value = text
   snackbarColor.value = color
@@ -115,10 +150,18 @@ provide('showSnackbar', showSnackbar)
 
 // Provide database path to child components
 provide('dbPath', currentDbPath)
+provide('updateAvailable', updateAvailable) // Provide for other components if needed
 
 // Navigation
 function navigateTo(view: 'welcome' | 'usb' | 'serial' | 'disk' | 'support') {
   currentView.value = view
+}
+
+function openUpdateUrl() {
+  if (updateUrl.value) {
+    window.open(updateUrl.value, '_blank')
+    updateAvailable.value = false
+  }
 }
 
 // Database opened
@@ -158,7 +201,49 @@ onMounted(async () => {
   } catch (e) {
     console.log('[App] No stored database path')
   }
+  // Check for updates
+  checkUpdate()
 })
+
+// Check for updates
+async function checkUpdate() {
+  const specOS = await window.electronAPI.invoke({ invoketype: 'get-os-spec' })
+  // Current app version
+  const currentVersion = '1.0.0' // TODO: Get from package.json or exposed by main.ts
+
+  console.log(`[App] Checking for updates (OS: ${specOS}, Current: ${currentVersion})`)
+
+  try {
+    const response = await fetch('https://api.github.com/repos/giloutho/logflygps/releases/latest')
+    if (response.ok) {
+      const data = await response.json()
+      const latestVersion = data.tag_name.replace('v', '')
+
+      console.log(`[App] Latest version: ${latestVersion}`)
+
+      if (compareVersions(latestVersion, currentVersion) > 0) {
+        updateVersion.value = latestVersion
+        updateUrl.value = data.html_url
+        updateAvailable.value = true
+      }
+    }
+  } catch (error) {
+    console.error('[App] Update check failed:', error)
+  }
+}
+
+function compareVersions(v1: string, v2: string) {
+  const parts1 = v1.split('.').map(Number)
+  const parts2 = v2.split('.').map(Number)
+
+  for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
+    const p1 = parts1[i] || 0
+    const p2 = parts2[i] || 0
+    if (p1 > p2) return 1
+    if (p1 < p2) return -1
+  }
+  return 0
+}
 </script>
 
 <style scoped>
