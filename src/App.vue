@@ -75,11 +75,11 @@
             <v-img :src="logoUrl" width="64" height="64" class="mr-4 flex-grow-0" />
             <div>
               <div class="text-subtitle-1 font-weight-bold">{{ $gettext('New version available') }}</div>
-              <div class="text-body-2">{{ $gettext('Version') }} {{ updateVersion }} {{ $gettext('is available.')
-              }}</div>
+              <div class="text-body-2">{{ $gettext('Version') }} {{ updateVersion }} {{ $gettext('is available')
+              }}.</div>
             </div>
           </div>
-          <p>{{ $gettext('Click download to get the latest version from GitHub.') }}</p>
+          <p>{{ $gettext('Click download to get the latest version from GitHub') }}</p>
         </v-card-text>
         <v-card-actions>
           <v-spacer />

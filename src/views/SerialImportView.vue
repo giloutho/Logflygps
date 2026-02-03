@@ -15,8 +15,8 @@
             </v-card-title>
             <v-card-text>
                 <p class="mb-4">
-                    {{ $gettext('Select your GPS device type. LogflyGPS will scan all serial ports to find your GPS.')
-                    }}
+                    {{ $gettext('Select your GPS device type') }}.
+                    {{ $gettext('LogflyGPS will scan all serial ports to find your GPS') }}
                 </p>
 
                 <v-row>

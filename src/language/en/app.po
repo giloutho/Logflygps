@@ -33,7 +33,11 @@ msgstr "Cancel"
 msgid "Choose a folder"
 msgstr "Choose a folder"
 
-#: src/App.vue:72 src/components/FlightTable.vue:16
+#: src/App.vue:82
+msgid "Click download to get the latest version from GitHub"
+msgstr ""
+
+#: src/App.vue:101 src/components/FlightTable.vue:16
 #: src/components/OpenLogbook.vue:68
 msgid "Close"
 msgstr "Close"
@@ -54,7 +58,7 @@ msgstr "Create new logbook"
 msgid "Date"
 msgstr "Date"
 
-#: src/App.vue:29 src/components/TheWelcome.vue:27
+#: src/App.vue:28 src/components/TheWelcome.vue:27
 #: src/views/DiskImportView.vue:7
 msgid "Disk"
 msgstr "Disk"
@@ -62,6 +66,10 @@ msgstr "Disk"
 #: src/components/FlightTable.vue:6
 msgid "Display all tracks"
 msgstr "Display all tracks"
+
+#: src/App.vue:90
+msgid "Download"
+msgstr ""
 
 #: src/components/FlightListDialog.vue:23 src/components/FlightTable.vue:126
 msgid "Duration"
@@ -131,11 +139,19 @@ msgstr "In previous versions of Logfly"
 msgid "Invalid"
 msgstr "Invalid"
 
+#: src/App.vue:78
+msgid "is available"
+msgstr ""
+
 #: src/views/SupportView.vue:38
 msgid "Languages"
 msgstr "Languages"
 
-#: src/App.vue:125 src/App.vue:34
+#: src/App.vue:87
+msgid "Later"
+msgstr ""
+
+#: src/App.vue:172 src/App.vue:33
 msgid "Logbook"
 msgstr "Logbook"
 
@@ -143,13 +159,23 @@ msgstr "Logbook"
 msgid "Logbooks detected"
 msgstr "Logbooks detected"
 
-#: src/components/TheWelcome.vue:59
-msgid ""
-"LogflyGPS allows importing GPS tracks into a logbook managed by the "
-"Logfly.app web application."
+#: src/components/TheWelcome.vue:51
+#, fuzzy
+msgid "LogflyGPS allows importing GPS tracks into a logbook"
 msgstr ""
 "LogflyGPS allows importing GPS tracks into a logbook managed by the "
 "Logfly.app web application."
+
+#: src/views/SerialImportView.vue:19
+#, fuzzy
+msgid "LogflyGPS will scan all serial ports to find your GPS"
+msgstr ""
+"Select your GPS device type. LogflyGPS will scan all serial ports to find "
+"your GPS."
+
+#: src/components/TheWelcome.vue:52
+msgid "managed by Logfly"
+msgstr ""
 
 #: src/views/SerialImportView.vue:52
 msgid "Manufacturer"
@@ -174,6 +200,10 @@ msgstr "Need help"
 #: src/components/OpenLogbook.vue:40
 msgid "New logbook"
 msgstr "New logbook"
+
+#: src/App.vue:77
+msgid "New version available"
+msgstr ""
 
 #: src/views/SerialImportView.vue:221
 msgid "No flights found on the ports list"
@@ -201,7 +231,7 @@ msgstr "No USB drives found"
 msgid "Open Contact Form"
 msgstr "Open Contact Form"
 
-#: src/App.vue:125
+#: src/App.vue:172
 msgid "opened"
 msgstr "opened"
 
@@ -230,7 +260,8 @@ msgid "Search"
 msgstr "Search"
 
 #: src/views/DiskImportView.vue:11
-msgid "Select a folder containing IGC or GPX track files to import."
+#, fuzzy
+msgid "Select a folder containing IGC or GPX track files to import"
 msgstr "Select a folder containing IGC or GPX track files to import."
 
 #: src/components/OpenLogbook.vue:29
@@ -242,18 +273,15 @@ msgid "Select folder"
 msgstr "Select folder"
 
 #: src/views/UsbImportView.vue:18
-msgid "Select your GPS device to automatically detect and import flights."
+#, fuzzy
+msgid "Select your GPS device to automatically import flights"
 msgstr "Select your GPS device to automatically detect and import flights."
 
 #: src/views/SerialImportView.vue:18
-msgid ""
-"Select your GPS device type. LogflyGPS will scan all serial ports to find "
-"your GPS."
+msgid "Select your GPS device type"
 msgstr ""
-"Select your GPS device type. LogflyGPS will scan all serial ports to find "
-"your GPS."
 
-#: src/App.vue:24 src/components/TheWelcome.vue:21
+#: src/App.vue:23 src/components/TheWelcome.vue:21
 #: src/views/SerialImportView.vue:14
 msgid "Serial GPS"
 msgstr "Serial GPS"
@@ -270,7 +298,7 @@ msgstr "Serial Ports Detected"
 msgid "Site"
 msgstr "Site"
 
-#: src/App.vue:39 src/views/SupportView.vue:11
+#: src/App.vue:38 src/views/SupportView.vue:11
 msgid "Support"
 msgstr "Support"
 
@@ -291,7 +319,7 @@ msgstr "Time"
 msgid "tracks decoded"
 msgstr "tracks decoded"
 
-#: src/App.vue:135 src/views/DiskImportView.vue:250
+#: src/App.vue:182 src/views/DiskImportView.vue:250
 #: src/views/SerialImportView.vue:303 src/views/UsbImportView.vue:340
 msgid "tracks imported"
 msgstr "tracks imported"
@@ -304,11 +332,15 @@ msgstr "Unable to retrieve serial ports"
 msgid "Unknown"
 msgstr "Unknown"
 
+#: src/App.vue:71
+msgid "Update Available"
+msgstr ""
+
 #: src/views/UsbImportView.vue:44
 msgid "USB Drives Detected"
 msgstr "USB Drives Detected"
 
-#: src/App.vue:19 src/components/TheWelcome.vue:15
+#: src/App.vue:18 src/components/TheWelcome.vue:15
 #: src/views/UsbImportView.vue:14
 msgid "USB GPS"
 msgstr "USB GPS"
@@ -316,6 +348,10 @@ msgstr "USB GPS"
 #: src/views/UsbImportView.vue:35
 msgid "Usb list"
 msgstr "Usb list"
+
+#: src/App.vue:78
+msgid "Version"
+msgstr ""
 
 #: src/components/TheWelcome.vue:7
 msgid "Welcome to LogflyGPS"

@@ -8,7 +8,7 @@
             </v-card-title>
             <v-card-text>
                 <p class="mb-4">
-                    {{ $gettext('Select a folder containing IGC or GPX track files to import.') }}
+                    {{ $gettext('Select a folder containing IGC or GPX track files to import') }}
                 </p>
 
                 <v-btn color="success" size="large" prepend-icon="mdi-folder-search" @click="selectFolder"

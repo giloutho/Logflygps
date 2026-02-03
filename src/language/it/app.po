@@ -1,13 +1,16 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 
 #: src/components/FlightTable.vue:129
 msgid "Actions"
@@ -27,16 +30,20 @@ msgstr ""
 
 #: src/components/OpenLogbook.vue:58
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #: src/components/OpenLogbook.vue:19
 msgid "Choose a folder"
+msgstr "Seleziona una cartella"
+
+#: src/App.vue:82
+msgid "Click download to get the latest version from GitHub"
 msgstr ""
 
-#: src/App.vue:72 src/components/FlightTable.vue:16
+#: src/App.vue:101 src/components/FlightTable.vue:16
 #: src/components/OpenLogbook.vue:68
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #: src/views/SupportView.vue:11
 msgid "Contact"
@@ -48,36 +55,40 @@ msgstr ""
 
 #: src/components/OpenLogbook.vue:49
 msgid "Create new logbook"
-msgstr ""
+msgstr "Crea un nuovo registro"
 
 #: src/components/FlightListDialog.vue:21 src/components/FlightTable.vue:124
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
-#: src/App.vue:29 src/components/TheWelcome.vue:27
+#: src/App.vue:28 src/components/TheWelcome.vue:27
 #: src/views/DiskImportView.vue:7
 msgid "Disk"
-msgstr ""
+msgstr "Disco"
 
 #: src/components/FlightTable.vue:6
 msgid "Display all tracks"
 msgstr ""
 
+#: src/App.vue:90
+msgid "Download"
+msgstr "Download"
+
 #: src/components/FlightListDialog.vue:23 src/components/FlightTable.vue:126
 msgid "Duration"
-msgstr ""
+msgstr "Durata"
 
 #: src/views/SupportView.vue:39
 msgid "English"
-msgstr ""
+msgstr "Inglese"
 
 #: src/components/OpenLogbook.vue:43
 msgid "Enter a name and click the Create button"
-msgstr ""
+msgstr "Inserisci un nome e fai clic su Crea"
 
 #: src/components/OpenLogbook.vue:171 src/views/DiskImportView.vue:148
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: src/components/OpenLogbook.vue:264 src/components/OpenLogbook.vue:267
 msgid "Error creating the logbook"
@@ -97,7 +108,7 @@ msgstr ""
 
 #: src/components/FlightTable.vue:127
 msgid "File"
-msgstr ""
+msgstr "File"
 
 #: src/views/SerialImportView.vue:348
 msgid "Flight preview"
@@ -109,7 +120,7 @@ msgstr ""
 
 #: src/views/SupportView.vue:39
 msgid "French"
-msgstr ""
+msgstr "Francese"
 
 #: src/views/SupportView.vue:12
 msgid "Have a question or suggestion"
@@ -117,7 +128,7 @@ msgstr ""
 
 #: src/components/FlightTable.vue:13
 msgid "Import"
-msgstr ""
+msgstr "Importazione"
 
 #: src/views/SerialImportView.vue:265
 msgid "Importing"
@@ -129,22 +140,38 @@ msgstr ""
 
 #: src/components/FlightTable.vue:62
 msgid "Invalid"
+msgstr "Non valida"
+
+#: src/App.vue:78
+msgid "is available"
 msgstr ""
 
 #: src/views/SupportView.vue:38
 msgid "Languages"
+msgstr "Lingue"
+
+#: src/App.vue:87
+msgid "Later"
 msgstr ""
 
-#: src/App.vue:125 src/App.vue:34
+#: src/App.vue:172 src/App.vue:33
 msgid "Logbook"
-msgstr ""
+msgstr "Diario di volo"
 
 #: src/components/OpenLogbook.vue:28
 msgid "Logbooks detected"
 msgstr ""
 
-#: src/components/TheWelcome.vue:59
-msgid "LogflyGPS allows importing GPS tracks into a logbook managed by the Logfly.app web application."
+#: src/components/TheWelcome.vue:51
+msgid "LogflyGPS allows importing GPS tracks into a logbook"
+msgstr ""
+
+#: src/views/SerialImportView.vue:19
+msgid "LogflyGPS will scan all serial ports to find your GPS"
+msgstr ""
+
+#: src/components/TheWelcome.vue:52
+msgid "managed by Logfly"
 msgstr ""
 
 #: src/views/SerialImportView.vue:52
@@ -153,7 +180,7 @@ msgstr ""
 
 #: src/views/DiskImportView.vue:277 src/views/UsbImportView.vue:367
 msgid "Map"
-msgstr ""
+msgstr "Mappa"
 
 #: src/views/SerialImportView.vue:332
 msgid "Map request"
@@ -161,7 +188,7 @@ msgstr ""
 
 #: src/views/SerialImportView.vue:51
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: src/views/SupportView.vue:12
 msgid "Need help"
@@ -169,6 +196,10 @@ msgstr ""
 
 #: src/components/OpenLogbook.vue:40
 msgid "New logbook"
+msgstr ""
+
+#: src/App.vue:77
+msgid "New version available"
 msgstr ""
 
 #: src/views/SerialImportView.vue:221
@@ -187,23 +218,23 @@ msgstr ""
 
 #: src/views/SerialImportView.vue:139 src/views/SerialImportView.vue:166
 msgid "No usable serial port detected"
-msgstr ""
+msgstr "Non è stata rilevata alcuna porta seriale utilizzabile"
 
 #: src/views/UsbImportView.vue:154 src/views/UsbImportView.vue:179
 msgid "No USB drives found"
-msgstr ""
+msgstr "Nessuna unità USB rilevata"
 
 #: src/views/SupportView.vue:19
 msgid "Open Contact Form"
 msgstr ""
 
-#: src/App.vue:125
+#: src/App.vue:172
 msgid "opened"
 msgstr ""
 
 #: src/components/FlightTable.vue:128
 msgid "Pilot"
-msgstr ""
+msgstr "Pilota"
 
 #: src/components/FlightListDialog.vue:5
 msgid "Quick Logbook View"
@@ -215,18 +246,18 @@ msgstr ""
 
 #: src/components/OpenLogbook.vue:23
 msgid "Reopen"
-msgstr ""
+msgstr "Riapri"
 
 #: src/views/DiskImportView.vue:89
 msgid "Scanning"
-msgstr ""
+msgstr "Scansione"
 
 #: src/views/SerialImportView.vue:157 src/views/UsbImportView.vue:169
 msgid "Search"
-msgstr ""
+msgstr "Ricerca"
 
 #: src/views/DiskImportView.vue:11
-msgid "Select a folder containing IGC or GPX track files to import."
+msgid "Select a folder containing IGC or GPX track files to import"
 msgstr ""
 
 #: src/components/OpenLogbook.vue:29
@@ -235,36 +266,36 @@ msgstr ""
 
 #: src/views/DiskImportView.vue:16
 msgid "Select folder"
-msgstr ""
+msgstr "Seleziona cartella"
 
 #: src/views/UsbImportView.vue:18
-msgid "Select your GPS device to automatically detect and import flights."
+msgid "Select your GPS device to automatically import flights"
 msgstr ""
 
 #: src/views/SerialImportView.vue:18
-msgid "Select your GPS device type. LogflyGPS will scan all serial ports to find your GPS."
+msgid "Select your GPS device type"
 msgstr ""
 
-#: src/App.vue:24 src/components/TheWelcome.vue:21
+#: src/App.vue:23 src/components/TheWelcome.vue:21
 #: src/views/SerialImportView.vue:14
 msgid "Serial GPS"
 msgstr ""
 
 #: src/views/SerialImportView.vue:36
 msgid "Serial ports"
-msgstr ""
+msgstr "Porte seriali"
 
 #: src/views/SerialImportView.vue:45
 msgid "Serial Ports Detected"
-msgstr ""
+msgstr "Porte seriali rilevate"
 
 #: src/components/FlightListDialog.vue:24
 msgid "Site"
-msgstr ""
+msgstr "Sito"
 
-#: src/App.vue:39 src/views/SupportView.vue:11
+#: src/App.vue:38 src/views/SupportView.vue:11
 msgid "Support"
-msgstr ""
+msgstr "Supporto"
 
 #: src/components/OpenLogbook.vue:129
 msgid "the default logbook folder was Documents/Logfly"
@@ -276,17 +307,17 @@ msgstr ""
 
 #: src/components/FlightListDialog.vue:22 src/components/FlightTable.vue:125
 msgid "Time"
-msgstr ""
+msgstr "Ora"
 
 #: src/components/FlightTable.vue:5 src/views/DiskImportView.vue:122
 #: src/views/UsbImportView.vue:196
 msgid "tracks decoded"
-msgstr ""
+msgstr "tracce decodificate"
 
-#: src/App.vue:135 src/views/DiskImportView.vue:250
+#: src/App.vue:182 src/views/DiskImportView.vue:250
 #: src/views/SerialImportView.vue:303 src/views/UsbImportView.vue:340
 msgid "tracks imported"
-msgstr ""
+msgstr "tracce importate"
 
 #: src/views/SerialImportView.vue:142
 msgid "Unable to retrieve serial ports"
@@ -296,19 +327,27 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/views/UsbImportView.vue:44
-msgid "USB Drives Detected"
+#: src/App.vue:71
+msgid "Update Available"
 msgstr ""
 
-#: src/App.vue:19 src/components/TheWelcome.vue:15
+#: src/views/UsbImportView.vue:44
+msgid "USB Drives Detected"
+msgstr "Disco USB rilevato"
+
+#: src/App.vue:18 src/components/TheWelcome.vue:15
 #: src/views/UsbImportView.vue:14
 msgid "USB GPS"
 msgstr ""
 
 #: src/views/UsbImportView.vue:35
 msgid "Usb list"
+msgstr "Lista usb"
+
+#: src/App.vue:78
+msgid "Version"
 msgstr ""
 
 #: src/components/TheWelcome.vue:7
 msgid "Welcome to LogflyGPS"
-msgstr ""
+msgstr "Benvenuto su LogflyGPS"

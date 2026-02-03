@@ -22,7 +22,7 @@ msgstr "Déja présentes dans le carnet"
 
 #: src/views/SerialImportView.vue:175
 msgid "attempt to read on"
-msgstr "Tentative de lecture sur"
+msgstr "tentative de lecture sur"
 
 #: src/views/SupportView.vue:28
 msgid "Bug reports"
@@ -36,7 +36,11 @@ msgstr "Annuler"
 msgid "Choose a folder"
 msgstr "Choisir un dossier"
 
-#: src/App.vue:72 src/components/FlightTable.vue:16
+#: src/App.vue:82
+msgid "Click download to get the latest version from GitHub"
+msgstr "Cliquez sur Télécharger pour obtenir la dernière version depuis GitHub"
+
+#: src/App.vue:101 src/components/FlightTable.vue:16
 #: src/components/OpenLogbook.vue:68
 msgid "Close"
 msgstr "Fermer"
@@ -57,7 +61,7 @@ msgstr "Créer un nouveau carnet"
 msgid "Date"
 msgstr "Date"
 
-#: src/App.vue:29 src/components/TheWelcome.vue:27
+#: src/App.vue:28 src/components/TheWelcome.vue:27
 #: src/views/DiskImportView.vue:7
 msgid "Disk"
 msgstr "Disque"
@@ -65,6 +69,10 @@ msgstr "Disque"
 #: src/components/FlightTable.vue:6
 msgid "Display all tracks"
 msgstr "Afficher toutes les traces"
+
+#: src/App.vue:90
+msgid "Download"
+msgstr "Télécharge"
 
 #: src/components/FlightListDialog.vue:23 src/components/FlightTable.vue:126
 msgid "Duration"
@@ -128,17 +136,25 @@ msgstr "Importation"
 
 #: src/components/OpenLogbook.vue:128
 msgid "In previous versions of Logfly"
-msgstr ""
+msgstr "Dans les versions précédentes de Logfly"
 
 #: src/components/FlightTable.vue:62
 msgid "Invalid"
 msgstr "Invalide"
 
+#: src/App.vue:78
+msgid "is available"
+msgstr "est disponible"
+
 #: src/views/SupportView.vue:38
 msgid "Languages"
 msgstr "Langues"
 
-#: src/App.vue:125 src/App.vue:34
+#: src/App.vue:87
+msgid "Later"
+msgstr "Plus tard"
+
+#: src/App.vue:172 src/App.vue:33
 msgid "Logbook"
 msgstr "Carnet"
 
@@ -146,176 +162,192 @@ msgstr "Carnet"
 msgid "Logbooks detected"
 msgstr "Carnets détectés"
 
-#: src/components/TheWelcome.vue:59
-msgid ""
-"LogflyGPS allows importing GPS tracks into a logbook managed by the "
-"Logfly.app web application."
-msgstr ""
+#: src/components/TheWelcome.vue:51
+msgid "LogflyGPS allows importing GPS tracks into a logbook"
+msgstr "LogflyGPS permet l’importation de traces GPS dans un carnet"
+
+#: src/views/SerialImportView.vue:19
+msgid "LogflyGPS will scan all serial ports to find your GPS"
+msgstr "LogflyGPS va explorer les ports série pour localiser votre GPS"
+
+#: src/components/TheWelcome.vue:52
+msgid "managed by Logfly"
+msgstr "géré par Logfly"
 
 #: src/views/SerialImportView.vue:52
 msgid "Manufacturer"
-msgstr ""
+msgstr "Fabricant"
 
 #: src/views/DiskImportView.vue:277 src/views/UsbImportView.vue:367
 msgid "Map"
-msgstr ""
+msgstr "Carte"
 
 #: src/views/SerialImportView.vue:332
 msgid "Map request"
-msgstr ""
+msgstr "Carte demandée"
 
 #: src/views/SerialImportView.vue:51
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: src/views/SupportView.vue:12
 msgid "Need help"
-msgstr ""
+msgstr "Besoin d’aide"
 
 #: src/components/OpenLogbook.vue:40
 msgid "New logbook"
-msgstr ""
+msgstr "Nouveau carnet"
+
+#: src/App.vue:77
+msgid "New version available"
+msgstr "Nouvelle version disponible"
 
 #: src/views/SerialImportView.vue:221
 msgid "No flights found on the ports list"
-msgstr ""
+msgstr "Pas de vols détectés sur les ports série"
 
 #: src/components/OpenLogbook.vue:167
 msgid "No logbook found in this folder"
-msgstr ""
+msgstr "Pas de carnet dans ce dossier"
 
 #: src/views/DiskImportView.vue:118 src/views/DiskImportView.vue:131
 #: src/views/DiskImportView.vue:145 src/views/UsbImportView.vue:192
 #: src/views/UsbImportView.vue:205 src/views/UsbImportView.vue:219
 msgid "No tracks in this folder"
-msgstr ""
+msgstr "Pas de traces dans ce dossier"
 
 #: src/views/SerialImportView.vue:139 src/views/SerialImportView.vue:166
 msgid "No usable serial port detected"
-msgstr ""
+msgstr "Pas de port série utilisable détecté"
 
 #: src/views/UsbImportView.vue:154 src/views/UsbImportView.vue:179
 msgid "No USB drives found"
-msgstr ""
+msgstr "Pas de disques USB détectés"
 
 #: src/views/SupportView.vue:19
 msgid "Open Contact Form"
-msgstr ""
+msgstr "Ouvrir le formulaire de contact"
 
-#: src/App.vue:125
+#: src/App.vue:172
 msgid "opened"
-msgstr ""
+msgstr "ouvert"
 
 #: src/components/FlightTable.vue:128
 msgid "Pilot"
-msgstr ""
+msgstr "Pilote"
 
 #: src/components/FlightListDialog.vue:5
 msgid "Quick Logbook View"
-msgstr ""
+msgstr "Affichage rapide du carnet"
 
 #: src/views/UsbImportView.vue:183
 msgid "Reading flights in progress"
-msgstr ""
+msgstr "Lecture des vols en cours"
 
 #: src/components/OpenLogbook.vue:23
 msgid "Reopen"
-msgstr ""
+msgstr "Réouvrir"
 
 #: src/views/DiskImportView.vue:89
 msgid "Scanning"
-msgstr ""
+msgstr "Exploration"
 
 #: src/views/SerialImportView.vue:157 src/views/UsbImportView.vue:169
 msgid "Search"
-msgstr ""
+msgstr "Recherche"
 
 #: src/views/DiskImportView.vue:11
-msgid "Select a folder containing IGC or GPX track files to import."
-msgstr ""
+msgid "Select a folder containing IGC or GPX track files to import"
+msgstr "Choisir un dossier contenant des traces IGC ou GPX"
 
 #: src/components/OpenLogbook.vue:29
 msgid "Select a logbook"
-msgstr ""
+msgstr "Choisir un carnet"
 
 #: src/views/DiskImportView.vue:16
 msgid "Select folder"
-msgstr ""
+msgstr "Choisir le dossier"
 
 #: src/views/UsbImportView.vue:18
-msgid "Select your GPS device to automatically detect and import flights."
-msgstr ""
+msgid "Select your GPS device to automatically import flights"
+msgstr "Sélectionner votre GPS pour importer les vols"
 
 #: src/views/SerialImportView.vue:18
-msgid ""
-"Select your GPS device type. LogflyGPS will scan all serial ports to find "
-"your GPS."
-msgstr ""
+msgid "Select your GPS device type"
+msgstr "Sélectionner votre GPS"
 
-#: src/App.vue:24 src/components/TheWelcome.vue:21
+#: src/App.vue:23 src/components/TheWelcome.vue:21
 #: src/views/SerialImportView.vue:14
 msgid "Serial GPS"
-msgstr ""
+msgstr "GPS série"
 
 #: src/views/SerialImportView.vue:36
 msgid "Serial ports"
-msgstr ""
+msgstr "Ports série"
 
 #: src/views/SerialImportView.vue:45
 msgid "Serial Ports Detected"
-msgstr ""
+msgstr "Ports série détectés"
 
 #: src/components/FlightListDialog.vue:24
 msgid "Site"
-msgstr ""
+msgstr "Site"
 
-#: src/App.vue:39 src/views/SupportView.vue:11
+#: src/App.vue:38 src/views/SupportView.vue:11
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 #: src/components/OpenLogbook.vue:129
 msgid "the default logbook folder was Documents/Logfly"
-msgstr ""
+msgstr "le dossier par défaut était Documents/Logfly"
 
 #: src/components/OpenLogbook.vue:130
 msgid "The default logbook was logfly.db"
-msgstr ""
+msgstr "Le carnet par défaut était logfly.db"
 
 #: src/components/FlightListDialog.vue:22 src/components/FlightTable.vue:125
 msgid "Time"
-msgstr ""
+msgstr "Heure"
 
 #: src/components/FlightTable.vue:5 src/views/DiskImportView.vue:122
 #: src/views/UsbImportView.vue:196
 msgid "tracks decoded"
-msgstr ""
+msgstr "traces décodées"
 
-#: src/App.vue:135 src/views/DiskImportView.vue:250
+#: src/App.vue:182 src/views/DiskImportView.vue:250
 #: src/views/SerialImportView.vue:303 src/views/UsbImportView.vue:340
 msgid "tracks imported"
-msgstr ""
+msgstr "traces importées"
 
 #: src/views/SerialImportView.vue:142
 msgid "Unable to retrieve serial ports"
-msgstr ""
+msgstr "Pas de ports série localisés"
 
 #: src/views/SerialImportView.vue:58
 msgid "Unknown"
-msgstr ""
+msgstr "Inconnu"
+
+#: src/App.vue:71
+msgid "Update Available"
+msgstr "Mise à jour disponible"
 
 #: src/views/UsbImportView.vue:44
 msgid "USB Drives Detected"
-msgstr ""
+msgstr "Disques USB détectés"
 
-#: src/App.vue:19 src/components/TheWelcome.vue:15
+#: src/App.vue:18 src/components/TheWelcome.vue:15
 #: src/views/UsbImportView.vue:14
 msgid "USB GPS"
-msgstr ""
+msgstr "GPS USB"
 
 #: src/views/UsbImportView.vue:35
 msgid "Usb list"
-msgstr ""
+msgstr "Liste usb"
+
+#: src/App.vue:78
+msgid "Version"
+msgstr "Version"
 
 #: src/components/TheWelcome.vue:7
 msgid "Welcome to LogflyGPS"
-msgstr ""
+msgstr "Bienvenue sur LogflyGPS"

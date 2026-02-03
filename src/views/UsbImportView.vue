@@ -15,7 +15,7 @@
             </v-card-title>
             <v-card-text>
                 <p class="mb-4">
-                    {{ $gettext('Select your GPS device to automatically detect and import flights.') }}
+                    {{ $gettext('Select your GPS device to automatically import flights') }}
                 </p>
 
                 <v-row>
