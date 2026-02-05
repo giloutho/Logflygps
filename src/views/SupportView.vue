@@ -8,7 +8,16 @@
             </div>
 
             <!-- Title and description -->
-            <h1 class="support-title">{{ $gettext('Support') }} & {{ $gettext('Contact') }}</h1>
+            <h1 class="support-title">{{ $gettext('Support') }} &amp; {{ $gettext('Contact') }}</h1>
+
+            <!-- Documentation button -->
+            <v-btn color="success" variant="outlined" size="large" class="documentation-btn mb-6"
+                @click="openDocumentation">
+                <v-icon start>mdi-book-open-variant</v-icon>
+                {{ $gettext('Documentation') }}
+                <v-icon end>mdi-open-in-new</v-icon>
+            </v-btn>
+
             <p class="support-subtitle">{{ $gettext('Need help') }}? {{ $gettext('Have a question or suggestion') }}?
             </p>
             <p class="support-description">{{ $gettext('Contact the Logfly support our online form') }}.</p>
@@ -26,17 +35,10 @@
                     <v-icon color="primary" size="28">mdi-github</v-icon>
                     <div class="info-text">
                         <span class="info-label">{{ $gettext('Bug reports') }}</span>
-                        <a href="https://github.com/giloutho/Logfly-web/issues" target="_blank" rel="noopener"
+                        <a href="https://github.com/giloutho/Logflygps/issues" target="_blank" rel="noopener"
                             class="info-link">
                             GitHub
                         </a>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <v-icon color="primary" size="28">mdi-translate</v-icon>
-                    <div class="info-text">
-                        <span class="info-label">{{ $gettext('Languages') }}</span>
-                        <span class="info-value">{{ $gettext('French') }}, {{ $gettext('English') }}</span>
                     </div>
                 </div>
             </div>
@@ -45,16 +47,6 @@
             <div class="website-link">
                 <v-icon size="18" color="grey">mdi-web</v-icon>
                 <a href="https://logfly.org" target="_blank" rel="noopener">logfly.org</a>
-            </div>
-
-            <!-- App info -->
-            <div class="app-info mt-6">
-                <v-chip color="info" variant="tonal" size="small" class="mr-2">
-                    LogflyGPS v1.0.0
-                </v-chip>
-                <v-chip color="success" variant="tonal" size="small">
-                    Plugin for Logfly.app
-                </v-chip>
             </div>
         </div>
     </v-card>
@@ -66,6 +58,7 @@ import { useGettext } from 'vue3-gettext'
 const { $gettext } = useGettext()
 
 const contactUrl = 'https://logfly.org/logflydoc/contact/request/'
+const documentationUrl = 'https://logfly.org/logflygps/'
 
 /**
  * Open contact form in default browser
@@ -79,6 +72,20 @@ function openContactForm() {
         })
     } else {
         window.open(contactUrl, '_blank', 'noopener,noreferrer')
+    }
+}
+
+/**
+ * Open documentation in default browser
+ */
+function openDocumentation() {
+    if (window.electronAPI) {
+        window.electronAPI.invoke({
+            invoketype: 'shell:openExternal',
+            args: { url: documentationUrl }
+        })
+    } else {
+        window.open(documentationUrl, '_blank', 'noopener,noreferrer')
     }
 }
 </script>
@@ -128,6 +135,22 @@ function openContactForm() {
     font-size: 1rem;
     color: #666;
     margin-bottom: 32px;
+}
+
+.documentation-btn {
+    padding: 10px 28px !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    border-width: 2px !important;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s !important;
+}
+
+.documentation-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3) !important;
+    background-color: rgba(76, 175, 80, 0.08) !important;
 }
 
 .contact-btn {
