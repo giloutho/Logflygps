@@ -22,7 +22,8 @@ export default defineConfig({
                 'electron-store',
                 '@photostructure/tz-lookup',
                 'zoned-date-time',
-                'iana-tz-data'
+                'iana-tz-data',
+                'node:sqlite'
               ]
             }
           }

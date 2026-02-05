@@ -104,9 +104,9 @@ export function getGpsDumpPath(specOS: string): string {
 
     // In development, bin_ext is at project root
     // In production, it's in resources/bin_ext
-    if (process.env.NODE_ENV !== 'production') {
-        return path.join(process.env.APP_ROOT || '', 'bin_ext', gpsdumpName)
+    if (!app.isPackaged) {
+        return path.join(app.getAppPath(), 'bin_ext', gpsdumpName)
     } else {
-        return path.join(app.getAppPath(), '..', 'bin_ext', gpsdumpName)
+        return path.join(process.resourcesPath, 'bin_ext', gpsdumpName)
     }
 }
